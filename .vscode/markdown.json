@@ -1,0 +1,277 @@
+{
+	"A simple check list": {
+		"prefix": "done",
+		"body": [
+			"[✔️]"
+		],
+		"description": "A simple check list"
+	},
+	"Pendient emojji": {
+		"prefix": "pen",
+		"body": [
+			"[⏳]"
+		],
+		"description": "Pendient emoji"
+	},
+	"FOCUS thematic section": {
+		"prefix": "enf",
+		"body": [
+			"## ENFOQUE🧿: "
+		],
+		"description": "FOCUS thematic section"
+	},
+	"Logic thematic section": {
+		"prefix": "slog",
+		"body": [
+			"## LOGISTICA📦: "
+		],
+		"description": "Logic thematic section"
+	},
+	"UI thematic section": {
+		"prefix": "sui",
+		"body": [
+			"## UI📱: "
+		],
+		"description": "UI thematic section"
+	},
+	"UX thematic section": {
+		"prefix": "sux",
+		"body": [
+			"## UX🧑: "
+		],
+		"description": "UX thematic section"
+	},
+	"CODE thematic section": {
+		"prefix": "scod",
+		"body": [
+			"## <CODE/>: ",
+			"  ###  - 🐛Bug:$1",
+			"  ###  - ♻️Refactor:$2",
+			"  ###  - ✨Feature:$3 "
+		],
+		"description": "CODE thematic section"
+	},
+	"BUG subthematic section": {
+		"prefix": "ssbug",
+		"body": [
+			"  ### - 🐛Bug: "
+		],
+		"description": "BUG subthematic section"
+	},
+	"FEAT subthematic section": {
+		"prefix": "ssfeat",
+		"body": [
+			"  ### - ✨Feature: "
+		],
+		"description": "FEAT subthematic section"
+	},
+	"REFACTOR subthematic section": {
+		"prefix": "ssref",
+		"body": [
+			"  ### - ♻️Refactor: "
+		],
+		"description": "REFACTOR subthematic section"
+	},
+	"IDEA thematic section": {
+		"prefix": "side",
+		"body": [
+			"## IDEAS💡: "
+		],
+		"description": "IDEA thematic section"
+	},
+	"priority enphasis divisor": {
+		"prefix": "p1",
+		"body": [
+			"# PRIORITARIO🚩"
+		],
+		"description": "priority enphasis divisor"
+	},
+	"secondary enphasis divisor": {
+		"prefix": "p2",
+		"body": [
+			"# SECUNDARIO✌️"
+		],
+		"description": "secondary enphasis divisor"
+	},
+	"Design verb": {
+		"prefix": "des",
+		"body": [
+			"- 🎨Design: $1 [⏳]"
+		],
+		"description": "Design verb - Implica planear y crear la disposicion estetica y funcional de los elementos que componen la UI."
+	},
+	"Pick verb": {
+		"prefix": "pic",
+		"body": [
+			"- 👉Pick: $1 [⏳]"
+		],
+		"description": "Pick verb - Implica tomar una decision ya sea logica o estetica, para saber como continuar..."
+	},
+	"Spawn verb": {
+		"prefix": "spa",
+		"body": [
+			"- 🐣Spawn: $1 [⏳]"
+		],
+		"description": "Spawn verb - Implica de un todo, hacer otra parte, por ejemplo de toda una documentacion en español hacerla toda en ingles..."
+	},
+	"Add verb": {
+		"prefix": "add",
+		"body": [
+			"- 🧩Add: $1 [⏳]"
+		],
+		"description": "Add verb - Implica Sumar una caracteristica a algo existente"
+	},
+	"Create verb": {
+		"prefix": "cre",
+		"body": [
+			"- 🆕Create: $1 [⏳]"
+		],
+		"description": "Create verb - Implica la creacion de algo que ya esta definido o se sabe como llevar a cabo"
+	},
+	"ReSearch verb": {
+		"prefix": "res",
+		"body": [
+			"- 🔎ReSearch: $1 [⏳]"
+		],
+		"description": "ReSearch verb - Implica una busqueda y exploracion para encontrar una solucion"
+	},
+	"Boost verb": {
+		"prefix": "bos",
+		"body": [
+			"- ☄️Boost: $1 [⏳]"
+		],
+		"description": "Boos verb - Implica la optimizacion de algo existente"
+	},
+	"Check verb": {
+		"prefix": "che",
+		"body": [
+			"- 👀Check: $1 [⏳]"
+		],
+		"description": "Check verb - Implica la revision de una funcionalidad, tras comportamientos inesperados"
+	},
+	"Plan verb": {
+		"prefix": "pla",
+		"body": [
+			"- 🤔Plan: $1 [⏳]"
+		],
+		"description": "Plan verb - Implica el planeamiento de algo en general"
+	},
+	"Fix verb": {
+		"prefix": "fix",
+		"body": [
+			"- 🔧Fix: $1 [⏳]"
+		],
+		"description": "Fix verb - Implica el arreglo de algo dañado"
+	},
+	"List Item": {
+		"prefix": "li",
+		"body": [
+			"   - 🔹  $1"
+		],
+		"description": "List Item - Se usa para agregar una estetica mas llamativa a items en liastas"
+	},
+	"Priority level 1": {
+		"prefix": "pp1",
+		"body": [
+			"-  $1 🔴 1️⃣"
+		],
+		"description": "Priority level 1 - Se asigna a una tarea con una propiedad  1°"
+	},
+	"Priority level 2": {
+		"prefix": "pp2",
+		"body": [
+			"- : $1 🟠2️⃣"
+		],
+		"description": "Priority level 2 - Se asigna a una tarea con una propiedad  2°"
+	},
+	"Priority level 3": {
+		"prefix": "pp3",
+		"body": [
+			"-  $1 🟡3️⃣"
+		],
+		"description": "Priority level 3 - Se asigna a una tarea con una propiedad  3°"
+	},
+	"Priority level 4": {
+		"prefix": "pp4",
+		"body": [
+			"-  $1 🔵4️⃣"
+		],
+		"description": "Priority level 4 - Se asigna a una tarea con una propiedad  4°"
+	},
+"TODO full template file": {
+  "prefix": "TODO",
+  "body": [
+    "Hecho      ->  [✔️]",
+		"Denegado  ->   [❌]",
+    "pendiente  ->  [⏳]",
+    "",
+    "## ENFOQUE🧿: ",
+    "_$1_",
+    "---",
+    "",
+    "# PRIORITARIO🚩",
+    "",
+    "## LOGISTICA📦: ",
+    "## UI📱:  ",
+    "## UX🧑: ",
+    "## <CODE/>: ",
+    "  ### - 🐛Bug:",
+    "  ### - ♻️Refactor:",
+    "  ### - ✨Feature: ",
+    "## IDEAS💡: ",
+    "",
+    "# SECUNDARIO✌️",
+    "",
+    "## LOGISTICA📦: ",
+    "## UI📱:  ",
+    "## UX🧑: ",
+    "## <CODE/>: ",
+    "  ### - 🐛Bug:",
+    "  ### - ♻️Refactor:",
+    "  ### - ✨Feature: ",
+    "## IDEAS💡: ",
+    ""
+  ],
+  "description": "TODO full template file"
+},
+"Note highlight in Github": {
+	"prefix": "!n",
+	"body": [
+		"> [!NOTE]",
+		"> ${1:> Highlights information that users should take into account, even when skimming}"
+	],
+	"description": "> Highlights information that users should take into account, even when skimming"
+},
+"Tip highlight in GitHub": {
+	"prefix": "!t",
+	"body": [
+		"> [!TIP]",
+		"> ${1:Optional information to help a user be more successful}"
+	],
+	"description": "Optional information to help a user be more successful"
+},
+"important highlight in GitHub": {
+	"prefix": "!i",
+	"body": [
+		"> [!IMPORTANT]",
+		"> ${1:Crucial information necessary for users to succeed}"
+	],
+	"description": "Crucial information necessary for users to succeed"
+},
+"warning highlight in GitHub": {
+	"prefix": "!w",
+	"body": [
+		"> [!WARNING]",
+		"> ${1:Critical content demanding immediate user attention due to potential risks}"
+	],
+	"description": "Critical content demanding immediate user attention due to potential risks"
+},
+"caution highlight in GitHub": {
+	"prefix": "!c",
+	"body": [
+		"> [!CAUTION]",
+		"> ${1:Negative potential consequences of an action}"
+	],
+	"description": "Negative potential consequences of an action"
+}
+}

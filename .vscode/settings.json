@@ -1,0 +1,35 @@
+{
+  // FILE SETTINGS:
+  "files.exclude": {
+    "node_modules": true,
+    ".svelte-kit": true,
+  },
+  "search.exclude": {
+    "node_modules": true,
+  },
+  // WORKBENCH SETTINGS:
+  "workbench.editor.customLabels.patterns": {
+    "**/src/routes/**/+layout.svelte": "${dirname} - Layout",
+    "**/src/routes/**/+layout.server.ts": "${dirname} - Layout Server",
+    "**/src/routes/**/+layout.server.js": "${dirname} - Layout Server",
+    "**/src/routes/**/+page.svelte": "${dirname} - Page",
+    "**/src/routes/**/+page.server.ts": "${dirname} - Page Server",
+    "**/src/routes/**/+page.server.js": "${dirname} - Page Server",
+    "**/src/routes/**/+page.ts": "${dirname} - Page Load",
+    "**/src/routes/**/+page.js": "${dirname} - Page Load",
+    "**/src/routes/**/+error.svelte": "${dirname} - Error",
+    "**/src/routes/**/+layout.ts": "${dirname} - Layout Load",
+    "**/src/routes/**/+layout.js": "${dirname} - Layout Load"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    }
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}

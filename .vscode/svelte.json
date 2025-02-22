@@ -1,0 +1,51 @@
+{
+"Svelte Template": {
+  "prefix": "svelte",
+  "body": [
+    "<script>",
+    "\t$1",
+    "</script>",
+    "",
+    "<h1>${TM_DIRECTORY/^.+\\\\(.*)$/$1/}</h1>",
+    "",
+    "<style>",
+    "\t$3",
+    "</style>"
+  ],
+  "description": "Svelte Basic Template"
+},
+    "self closing tag":{
+        "prefix":"<s",
+        "body":[
+               "<${1:Component}/>"
+        ],
+        "description":"A simple quick self closing component tag"
+   },
+    "Render children":{
+        "prefix":"rc",
+        "body":[ "{@render children()}"],
+        "description":"just the render children line"
+   },
+   "if block svelte":{
+    "prefix":"ifs",
+    "body":[
+        "{#if $condition}",
+        " ",
+        "{/if}"],
+    "description":"an if block in svelte"},
+    "each block":{
+     "prefix":"eac",
+     "body":[
+       "{#each $iterable as $item }",
+       "$code",
+       "{/each}"],
+     "description":"an each block in svelte"},
+   "script lang typesript":{
+    "prefix":"sct",
+    "body":[
+      "<script lang='ts'>",
+        "$1",
+      "</script>"],
+    "description":"a script tag with the lang ts"}
+
+}
