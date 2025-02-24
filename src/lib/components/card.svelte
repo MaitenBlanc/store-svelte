@@ -1,8 +1,12 @@
 <script lang="ts">
-  import { cart } from './ts/cartStore'
-  import type { Product } from './ts/cartStore'
+  import { addToCart } from './ts/cartStore.js'
+  import type { Product } from './ts/types.ts'
 
   export let product: Product
+
+  const handleAddToCart = (product: Product) => {
+    addToCart(product)
+  }
 </script>
 
 <main>
@@ -21,11 +25,16 @@
         {product.description.length > 50 ? product.description.slice(0, 50) + '...' : product.description}
       </p>
       <p class="price">${product.price}</p>
+      <button
+        class="btn btn-primary"
+        on:click={() => handleAddToCart(product)}>
+        Add to Cart
+      </button>
     </div>
   </div>
 </main>
 
-<style>
+<style lang="postcss">
   .card {
     width: 20rem;
     max-width: 20rem;

@@ -93,7 +93,7 @@
   </div>
 </main>
 
-<style>
+<style lang="postcss">
   .footer,
   .copyright {
     background: linear-gradient(to right, #d25959, #ac4db1);

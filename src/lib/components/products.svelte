@@ -1,8 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { addToCart } from './ts/cartStore'
   import Card from './card.svelte'
-  import type { Product } from './ts/cartStore'
+  import type { Product } from './ts/types.ts'
 
   let products: Product[] = []
   const url = 'https://fakestoreapi.com'
@@ -15,10 +14,6 @@
       console.log('Error fetching: ', error)
     }
   })
-
-  const handleAddToCart = (product: Product) => {
-    addToCart(product)
-  }
 </script>
 
 <main>
@@ -26,16 +21,19 @@
   <div
     id="products"
     class="container">
-    {#each products as product}
-      <div class="card">
-        <Card {product} />
-        <button on:click={() => handleAddToCart(product)}>Add to Cart</button>
-      </div>
-    {/each}
+    {#if products.length > 0}
+      {#each products as product}
+        <div class="card">
+          <Card {product} />
+        </div>
+      {/each}
+    {:else}
+      <p>Loading products...</p>
+    {/if}
   </div>
 </main>
 
-<style>
+<style lang="postcss">
   .title {
     font-size: 3rem;
     margin: 1rem;

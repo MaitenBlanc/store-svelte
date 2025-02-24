@@ -27,7 +27,7 @@
   </div>
 </main>
 
-<style>
+<style lang="postcss">
   .container {
     background-image: url(../../assets/img/contact.jpeg);
     background-size: cover;

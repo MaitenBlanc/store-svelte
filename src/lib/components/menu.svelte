@@ -1,4 +1,19 @@
-<script>
+<script lang="ts">
+  import { derived } from 'svelte/store'
+  import { cart } from './ts/cartStore'
+  import type { CartProduct } from './ts/types'
+
+  let productsInCart = []
+
+  const totalItems = derived(cart, ($cart) => {
+    return $cart.reduce((sum: number, item: CartProduct) => sum + item.quantity, 0)
+  })
+
+  const subtotal = derived(cart, ($cart) => {
+    return $cart.reduce((sum: number, item: CartProduct) => sum + item.product.price * item.quantity, 0)
+  })
+
+  cart.subscribe((value) => (productsInCart = value))
 </script>
 
 <main>
@@ -55,7 +70,7 @@
                 stroke-width="2"
                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
-            <span class="badge badge-sm indicator-item">8</span>
+            <span class="badge badge-sm indicator-item">{$totalItems}</span>
           </div>
         </div>
         <div
@@ -63,10 +78,14 @@
           tabindex="0"
           class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
           <div class="card-body">
-            <span class="text-info-content text-lg font-bold">8 Items</span>
-            <span class="text-info">Subtotal: $999</span>
+            <span class="text-info-content text-lg font-bold">{$totalItems} Items</span>
+            <span class="text-info">Subtotal: ${$subtotal.toFixed(2)}</span>
             <div class="card-actions">
-              <button class="btn btn-primary btn-block">View Cart</button>
+              <a
+                href="/cart"
+                class="button">
+                View Cart
+              </a>
             </div>
           </div>
         </div>
@@ -82,7 +101,7 @@
   </div>
 </main>
 
-<style>
+<style lang="postcss">
   .store {
     font-weight: bold;
   }
@@ -124,5 +143,16 @@
 
   .menu {
     gap: 3em;
+  }
+
+  .button {
+    background-color: #ac4db1;
+    border: none;
+    font-weight: bold;
+    color: white;
+  }
+
+  .button:hover {
+    background-color: #ffc107;
   }
 </style>

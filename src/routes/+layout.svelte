@@ -1,6 +1,11 @@
 <script lang="ts">
-	import '../app.css';
-	let { children } = $props();
+  import Footer from '$lib/components/footer.svelte'
+  import Menu from '$lib/components/menu.svelte'
+  import '../app.css'
 </script>
 
-{@render children()}
+<main>
+  <Menu />
+  <slot />
+  <Footer />
+</main>
