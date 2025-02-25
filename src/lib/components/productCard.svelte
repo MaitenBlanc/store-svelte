@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { cart } from './ts/cartStore'
   import type { CartProduct } from './ts/types'
 
   export let product: CartProduct['product']

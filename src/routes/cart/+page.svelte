@@ -1,16 +1,8 @@
 <script lang="ts">
-  import { cart, removeFromCart } from '../../lib/components/ts/cartStore'
+  import { cart, removeFromCart, subtotal, totalItems } from '../../lib/components/ts/cartStore'
   import type { CartProduct } from '$lib/components/ts/types'
-  import { derived } from 'svelte/store'
   import ProductCard from '../../lib/components/productCard.svelte'
-
-  const totalItems = derived(cart, ($cart) => {
-    return $cart.reduce((sum: number, item: CartProduct) => sum + item.quantity, 0)
-  })
-
-  const subtotal = derived(cart, ($cart) => {
-    return $cart.reduce((sum: number, item: CartProduct) => sum + item.product.price * item.quantity, 0)
-  })
+  import { goto } from '$app/navigation'
 
   const updateQuantity = (productId: number, quantity: number) => {
     cart.update((cartItems) => {
@@ -21,6 +13,12 @@
         return item
       })
     })
+  }
+
+  const proceedToCheckout = () => {
+    if ($cart.length > 0) {
+      goto('/checkout')
+    }
   }
 </script>
 
@@ -62,7 +60,12 @@
         </span>
       </div>
       <div class="button">
-        <button class="btn btn-primary">Proceed to Checkout</button>
+        <button
+          class="btn btn-primary"
+          on:click={proceedToCheckout}
+          disabled={$cart.length === 0}>
+          Proceed to Checkout
+        </button>
       </div>
     {:else}
       <p>Your cart is empty.</p>
